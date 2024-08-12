@@ -1,0 +1,123 @@
+---
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-black text-white",
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-white",
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+  },
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-black text-white",
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+  },
+  NUMPY: {
+    name: "NumPy",
+    class: "bg-black text-white",
+  },
+  PANDAS: {
+    name: "Pandas",
+    class: "bg-black text-white",
+  },
+  MATPLOTLIB: {
+    name: "Matplotlib",
+    class: "bg-black text-white",
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Images Search",
+    description:
+      "Aplicación que utiliza la API de Unsplash para realizar búsquedas de imágenes capturadas por usuarios de la plataforma en diversos lugares del mundo, acompañadas de breves descripciones.",
+    link: "#",
+    github: "ihamvs",
+    image: "/images.png",
+    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Chat con IA",
+    description:
+      "Proyecto que utiliza las tecnologías de la página useLLM para aprovechar sus diversas opciones de inteligencia artificial.",
+    link: "#",
+    github: "ihamvs",
+    image: "/useLLM.png",
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Pomodoro APP",
+    description:
+      "Aplicacion para poder usar la tecnica pomodoro para hacer tareas de forma eficaz. Utilizando React Native",
+    link: "#",
+    github: "ihamvs",
+    image: "/pomodoro.png",
+    tags: [TAGS.REACT_NATIVE, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.CSS],
+  },
+  {
+    title: "Olympic Medals",
+    description:
+      "Proyecto en que a traves de analisis de datos se puede obtener los diez paises con mas medallas olimpicas en los juegos olimpicos de Tokyo 2020",
+    link: "#",
+    github: "ihamvs",
+    image: "/olympicsMedals.png",
+    tags: [TAGS.PYTHON, TAGS.PANDAS, TAGS.MATPLOTLIB, TAGS.NUMPY],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article class="my-10" id="projects">
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs py-1 px-2 border border-white/10`}
+            >
+              {" "}
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10 "
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

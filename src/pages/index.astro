@@ -1,0 +1,70 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title="Portfolio de Iham Vivanco - Programador Web y analista de datos">
+  <main class="px-4" id="main">
+    <SectionContainer class="py-44 pb-22">
+      <h1
+        class="dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, soy Iham Vivanco
+        <a
+          class="flex justify-center items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/iham-vivanco-09357a213/"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl opacity-80 max-w-[700px]">
+        <span class="text-red-200/90 block">
+          Desarrollador Front-end & Analista de datos
+        </span>
+        <span class="text-sky-200/90 block">De Til - Til, Chile.</span>
+        <span class="block">
+          Soy un desarrollador web versátil de Til-Til, Chile, que combina lo
+          mejor de dos mundos: la creación de experiencias web dinámicas y el
+          análisis de datos potente.
+        </span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/iham-vivanco-09357a213/">
+          <Linkedin class="size-4 lg:size-6">Linkedin</Linkedin>
+        </SocialPill>
+        <SocialPill>
+          <GitHub class="size-4 lg:size-6">GitHub</GitHub>
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6">Experiencia Laboral</h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer>
+      <Tecnologies />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex items-center gap-2">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="contact">
+      <Contact />
+    </SectionContainer>
+  </main>
+</Layout>
